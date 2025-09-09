@@ -49,7 +49,7 @@ function Projects() {
       className={`min-h-screen p-10 pt-20 bg-[url(./assets/background/bg4.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''}`}
     >
       {/* Section header */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10 text-white ">
+      <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10 text-white">
         <span className="bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text">
           Projects
         </span>
