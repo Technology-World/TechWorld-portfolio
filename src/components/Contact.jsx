@@ -2,7 +2,7 @@ import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
 import { GrContact } from "react-icons/gr";
 import { Link } from "react-router-dom"
 import { FaLinkedin, FaGithub, FaWhatsapp, FaPhone } from "react-icons/fa";
-import { IoCheckmark } from "react-icons/io5";
+import { IoCheckmark, IoClose } from "react-icons/io5";
 import { useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 
@@ -24,10 +24,10 @@ function Contact() {
     });
 
     if (response.ok) {
-      setStatus({ type: "success", message: "Message sent successfully!" });
+      setStatus({ type: "success", message: " Message sent successfully!" });
       form.reset();
     } else {
-      setStatus({ type: "error", message: "❌ Oops! Something went wrong." });
+      setStatus({ type: "error", message: " Oops! Something went wrong." });
     }
 
     // Hide after 4s
@@ -37,7 +37,7 @@ function Contact() {
   return (
     <div
       ref={ref}
-      className={`min-h-screen p-10 pt-20 bg-[url(./assets/background/bg5.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''}`}
+      className={`bg-[url(./assets/background/bg5.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''} flex flex-col w-full text-white p-10 lg:px-44`}
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10 text-white">
         <span className="bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text">
@@ -45,13 +45,13 @@ function Contact() {
         </span>
       </h2>
       {/* Main content */}
-      <main className='w-full flex flex-col lg:flex-row justify-between items-start text-white'>
+      <main className='w-full flex flex-col lg:flex-row gap-4 md:gap-0 justify-between items-start text-white'>
         {/* Left section */}
         <section className='w-full lg:w-[50%]'>
           <h3 className='flex items-center gap-x-2 text-2xl mb-8'>Get in touch {<GrContact className='text-lg' />} </h3>
-          <div className='w-full flex justify-right'>
+          <div className='w-full flex flex-col md:flex-row justify-right gap-4'>
             <div className='w-full'>
-              <h4 className='text-lg uppercase pb-3'>Contact</h4>
+              <h4 className='text-lg uppercase md:pb-3'>Contact</h4>
               <Link to="mailto:sodeeqadeosun@gmail.com" className='text-blue-500 hover:underline focus:underline'>sodeeqadeosun@gmail.com</Link>
             </div>
 
@@ -71,7 +71,7 @@ function Contact() {
         {/* Right section */}
         <section className='w-full lg:w-[50%]'>
           <h4 className='text-lg uppercase pb-3'>Contact Form</h4>
-          <p className="text-gray-800 mb-8">
+          <p className="text-gray-300 mb-8">
             Have a question or want to work together? Send me a message!
           </p>
 
@@ -108,10 +108,10 @@ function Contact() {
           {/* Simple success/error alert */}
           {status && (
             <div
-              className={`mt-4 px-4 py-2 rounded-lg flex text-white font-medium ${status.type === "success" ? "bg-blue-500" : "bg-red-600"
+              className={`mt-4 px-4 py-2 rounded-lg flex text-white font-medium ${status.type === "success" ? "bg-green-500" : "bg-red-500"
                 }`}
             >
-              <IoCheckmark /> {status.message}
+              {status.type === "success" ? <IoCheckmark /> : <IoClose />} {status.message}
             </div>
           )}
         </section>

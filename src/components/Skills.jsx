@@ -6,7 +6,7 @@ function Skills() {
   return (
     <div
       ref={ref}
-      className={`h-screen p-10 pt-20 bg-[url(./assets/background/bg3.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''} p-20`}
+      className={`p-10 pt-20 bg-[url(./assets/background/bg3.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''}`}
     >
 
       {/* Section Heading */}
@@ -18,10 +18,10 @@ function Skills() {
 
       <div>
         {/* Section Text */}
-        <h3 className='text-center font-medium text-white text-4xl'>The skills, tools and technologies I use:</h3>
+        <h3 className='text-center font-medium text-white md:text-4xl'>The skills, tools and technologies I use:</h3>
 
         {/* Section images */}
-        <div className="grid grid-col-3 md:grid-cols-5 w-full md:w-[50%] place-items-center mx-auto mt-10 gap-y-10">
+        <div className="w-full md:w-[50%] grid grid-cols-3 md:grid-cols-5 place-items-center mx-auto mt-6 md:mt-10 gap-y-10">
 
           <img className='h-[64px] w-[64px]' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
 

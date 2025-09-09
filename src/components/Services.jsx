@@ -16,7 +16,7 @@ function Services() {
             title: "IT Support & Troubleshooting",
             description:
                 "With a background in IT support, I provide hardware/software troubleshooting, technical assistance, and maintenance for businesses and individuals.",
-            tagline:"Reliable Tech Assistance",
+            tagline: "Reliable Tech Assistance",
             icon: "🛠",
         },
         {
@@ -37,7 +37,7 @@ function Services() {
             title: "Debugging & Optimization",
             description:
                 "I write maintainable, scalable code and excel in debugging and optimizing applications for performance and reliability.",
-            tagline:"Clean, Scalable Code",
+            tagline: "Clean, Scalable Code",
             icon: "⚡",
         },
         {
@@ -52,8 +52,7 @@ function Services() {
     return (
         <div
             ref={ref}
-            className={`relative min-h-screen p-10 pt-20 bg-[url(./assets/background/bg2.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? "visible" : ""
-                }`}
+            className={`relative p-10 pt-20 bg-[url(./assets/background/bg2.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? "visible" : ""}`}
         >
             {/* Section Heading */}
             <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-5 text-white">

@@ -15,9 +15,9 @@ function About({ onProjectsClick }) {
   return (
     <div
       ref={ref}
-      className={`h-screen bg-[url(./assets/background/bg1.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''} flex w-full  text-white px-44`}
+      className={`bg-[url(./assets/background/bg1.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''} flex flex-col md:flex-row w-full text-white p-10 lg:px-44`}
     >
-      <section className="w-[50%] min-h-screen flex flex-col justify-center gap-4">
+      <section className="w-full flex flex-col md:justify-center gap-4">
         {/* Gradient Heading */}
         <div className="flex flex-col gap-2 text-2xl md:text-5xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text">
           <h1 className=''>
@@ -37,24 +37,24 @@ function About({ onProjectsClick }) {
         </p>
 
         {/* Button */}
-        <div className='flex fflex-col md:flex-row gap-3'>
+        <div className='flex flex-col md:flex-row md:gap-3'>
           <button
             onClick={onProjectsClick}
-            className="w-[30%] mt-8 inline-block px-6 py-3 text-white rounded-full border-2 border-t-pink-500 border-b-purple-500 border-x-blue-500 hover:bg-gradient-to-r from-pink-500 via-blue-500 to-purple-500 transition duration-300"
+            className="w-[50%] md:w-[30%] mt-8 inline-block p-2 lg:px-6 lg:py-3 text-white rounded-full border-2 border-t-pink-500 border-b-purple-500 border-x-blue-500 hover:bg-gradient-to-r from-pink-500 via-blue-500 to-purple-500 transition duration-300 lg:uppercase"
           >
-            VIEW MY WORK
+            View my work
           </button>
           <button
             onClick={handleClick}
-            className="w-[30%] mt-8 inline-block px-6 py-3 text-white rounded-full border-2 border-t-pink-500 border-b-purple-500 border-x-blue-500 hover:bg-gradient-to-r from-pink-500 via-blue-500 to-purple-500 transition duration-300"
+            className="w-[50%] md:w-[30%] mt-8 inline-block p-2 lg:px-6 lg:py-3 text-white rounded-full border-2 border-t-pink-500 border-b-purple-500 border-x-blue-500 hover:bg-gradient-to-r from-pink-500 via-blue-500 to-purple-500 transition duration-300 lg:uppercase"
           >
-            VIEW MY RESUME
+            view my Resume
           </button>
         </div>
 
       </section>
 
-      <section className='w-[50%] min-h-screen flex flex-col justify-center items-center text-center'>
+      <section className='w-[50%] justify-center items-center text-center hidden md:flex'>
         <img src={myImage} alt="Frontend Developer" className="h-auto object-contain" />
       </section>
     </div>

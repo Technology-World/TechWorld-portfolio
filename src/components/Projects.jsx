@@ -46,7 +46,7 @@ function Projects() {
   return (
     <div
       ref={ref}
-      className={`min-h-screen p-10 pt-20 bg-[url(./assets/background/bg4.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''}`}
+      className={`p-10 pt-20 bg-[url(./assets/background/bg4.jpg)] bg-cover bg-no-repeat fade-in-section ${visible ? 'visible' : ''}`}
     >
       {/* Section header */}
       <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10 text-white">
@@ -55,7 +55,7 @@ function Projects() {
         </span>
       </h2>
 
-      <div className='w-full grid grid-cols-2 lg:grid-cols-3 gap-6 md:w-[80%] mx-auto my-7 items-center'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-6 md:w-[80%] mx-auto my-7 items-center'>
 
         {/* Content mapping */}
         {data.map(data => (
@@ -68,11 +68,11 @@ function Projects() {
               <img
                 src={data.image}
                 alt="weather API img"
-                className="w-full h-[250px] object-cover rounded-t-xl"
+                className="w-full lg:h-[250px] object-cover rounded-t-xl hidden md:block"
                 aria-label= {data.name}
               />
 
-              <div className="p-3 text-center space-y-2 h-[160px]">
+              <div className="lg:h-[170px] p-3 lg:text-center space-y-2">
                 <p className="text-lg font-semibold text-pink-400">{data.name}</p>
                 <p className="text-medium text-gray-300 italic">{data.description}</p>
                 <p className="text-medium text-blue-400">{"{ "}{data.tools}{" }"}</p>

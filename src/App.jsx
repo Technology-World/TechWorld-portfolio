@@ -36,7 +36,7 @@ function App() {
   // Update footer height dynamically
   useEffect(() => {
     if (footerRef.current) {
-      setFooterHeight(footerRef.current.onsetHeight);
+      setFooterHeight(footerRef.current.offsetHeight);
     }
   }, []);
 
