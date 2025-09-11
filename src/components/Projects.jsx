@@ -3,6 +3,7 @@ import furniture from "../assets/images/furniture.png";
 import weather from "../assets/images/weather.png";
 import socialMedia from "../assets/images/socialMedia.png";
 import ticketing from "../assets/images/e-ticketing.png";
+import todo from "../assets/images/todo.png";
 import { Link } from "react-router-dom";
 
 function Projects() {
@@ -14,7 +15,7 @@ function Projects() {
       image: furniture,
       name: "Web Development (API Integration)",
       description: "A website with a focus on minimal design, mobile responsiveness, and engaging product displays.",
-      tools: "HTML, CSS, React, Tailwind",
+      tools: "HTML, CSS, React JS, Tailwind",
       link: "https://furniture-app-umber.vercel.app/"
     },
     {
@@ -30,7 +31,7 @@ function Projects() {
       image: ticketing,
       name: "E-Ticketing Platform (API Integration)",
       description: "A responsive web app for seamless online ticket booking, featuring secure checkout, and smooth user experience.",
-      tools: "HTML, CSS, React, Taiwind",
+      tools: "HTML, CSS, React JS, Taiwind",
       link: "https://e-ticketing-wheat.vercel.app/"
     },
     {
@@ -40,6 +41,14 @@ function Projects() {
       description: "A simple hub with my social and professional links",
       tools: "HTML, CSS",
       link: "https://mysocialmedia-roan.vercel.app/"
+    },
+    {
+      id: 5,
+      image: todo,
+      name: "Minimal React Todo App",
+      description: "A clean and responsive React Todo app for managing tasks effortlessly. Add, complete, and delete tasks with a smooth, modern UI",
+      tools: "HTML, CSS, React JS",
+      link: "https://todo-app-cyan-nine-55.vercel.app/"
     },
   ]
 
@@ -69,7 +78,7 @@ function Projects() {
                 src={data.image}
                 alt="weather API img"
                 className="w-full lg:h-[250px] object-cover rounded-t-xl hidden md:block"
-                aria-label= {data.name}
+                aria-label={data.name}
               />
 
               <div className="lg:h-[170px] p-3 lg:text-center space-y-2">
@@ -78,7 +87,7 @@ function Projects() {
                 <p className="text-medium text-blue-400">{"{ "}{data.tools}{" }"}</p>
               </div>
             </Link>
-            
+
           </div>
         ))}</div>
     </div>
