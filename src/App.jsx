@@ -15,7 +15,7 @@ function App() {
   const contactRef = useRef(null);
   const footerRef = useRef(null);
 
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("about"); // ✅ Start from about
   const [scrollPercent, setScrollPercent] = useState(0);
   const [footerHeight, setFooterHeight] = useState(0);
 
@@ -62,12 +62,15 @@ function App() {
             const id = entry.target.getAttribute("data-id");
             setActiveSection(id);
 
-            // 🔹 Update the URL hash without reloading
+            // 🔹 Update the URL hash dynamically
             window.history.replaceState(null, "", `#${id}`);
           }
         });
       },
-      { threshold: 0.6 }
+      {
+        rootMargin: "-40% 0px -40% 0px", // ✅ Detect section around middle of screen
+        threshold: 0,
+      }
     );
 
     sections.forEach((section) => {
@@ -103,7 +106,7 @@ function App() {
       {/* Main content (with dynamic bottom padding) */}
       <main className="flex flex-col flex-grow" style={{ paddingBottom: footerHeight }}>
         <section ref={aboutRef}>
-          <About onProjectsClick={() => scrollToSection(projectsRef)} />
+          <About />
         </section>
 
         <section ref={servicesRef}>

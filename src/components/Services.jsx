@@ -62,7 +62,7 @@ function Services() {
             </h2>
 
             {/* Services Grid */}
-            <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+            <div className="grid gap-10 md:grid-cols-2">
                 {services.map((service, index) => (
                     <div
                         key={index}

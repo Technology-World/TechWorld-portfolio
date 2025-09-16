@@ -64,7 +64,7 @@ function Projects() {
         </span>
       </h2>
 
-      <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-6 md:w-[80%] mx-auto my-7 items-center'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto my-7 items-center'>
 
         {/* Content mapping */}
         {data.map(data => (
