@@ -106,7 +106,7 @@ function App() {
       {/* Main content (with dynamic bottom padding) */}
       <main className="flex flex-col flex-grow" style={{ paddingBottom: footerHeight }}>
         <section ref={aboutRef}>
-          <About />
+          <About onProjectsClick={() => scrollToSection(projectsRef)} />
         </section>
 
         <section ref={servicesRef}>
