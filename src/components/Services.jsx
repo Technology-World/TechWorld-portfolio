@@ -56,7 +56,7 @@ function Services() {
         >
             {/* Section Heading */}
             <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-5 text-white">
-                <span className="bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text">
+                <span className="bg-white md:bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text">
                     My Services
                 </span>
             </h2>
