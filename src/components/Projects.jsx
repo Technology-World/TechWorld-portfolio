@@ -64,7 +64,7 @@ function Projects() {
         </span>
       </h2>
 
-      <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto my-7 items-center'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto my-7'>
 
         {/* Content mapping */}
         {data.map(data => (
@@ -77,11 +77,11 @@ function Projects() {
               <img
                 src={data.image}
                 alt="weather API img"
-                className="w-full lg:h-[250px] object-cover rounded-t-xl hidden md:block"
+                className="w-full object-cover rounded-t-xl hidden md:block"
                 aria-label={data.name}
               />
 
-              <div className="lg:h-[170px] p-3 lg:text-center space-y-2">
+              <div className="p-3 lg:text-center space-y-2">
                 <p className="text-lg font-semibold text-pink-400">{data.name}</p>
                 <p className="text-medium text-gray-300 italic">{data.description}</p>
                 <p className="text-medium text-blue-400">{"{ "}{data.tools}{" }"}</p>
